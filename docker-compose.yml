@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  churn-prediction:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app 
+    environment:
+      - PYTHONUNBUFFERED=1
